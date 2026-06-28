@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gummy House · Мармелад</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="bento">
+
+    <!-- ШАПКА -->
+    <header class="card header">
+        <div class="logo">Gummy <span>House</span></div>
+        <div class="nav-buttons">
+            <button class="btn btn-yellow" id="goHomeBtn">🏠 Главная</button>
+            <button class="btn btn-pink" id="goCatalogBtn">🍭 Каталог</button>
+            <button class="btn" id="goCartBtn">🛒 Корзина</button>
+        </div>
+    </header>
+
+    <!-- ГЛАВНАЯ -->
+    <section id="mainPage">
+        <div class="card welcome-card">
+            <div class="welcome-title">🍬 Добро пожаловать в мир сладостей!</div>
+            <div class="features-grid">
+                <div class="feature-item">🍓 Натуральный сок</div>
+                <div class="feature-item">☪️ Халяль</div>
+                <div class="feature-item">🍭 Без сахара (для диабетиков)</div>
+            </div>
+            <div class="gallery">
+                <div class="gummy-img"><img src="images/delfin.jpg" alt="Дельфинчики"><span>Дельфинчики</span></div>
+                <div class="gummy-img"><img src="images/banan.jpg" alt="Бананчики"><span>Бананчики</span></div>
+                <div class="gummy-img"><img src="images/miks.jpg" alt="Мармеладный микс"><span>Мармеладный микс</span></div>
+                <div class="gummy-img"><img src="images/clubnika.jpg" alt="Клубника"><span>Ленточка клубника</span></div>
+                <div class="gummy-img"><img src="images/vishnya.jpg" alt="Вишня"><span>Ленточка вишня</span></div>
+                <div class="gummy-img"><img src="images/bubl-gum.jpg" alt="Бабл-гам"><span>Ленточка бабл-гам</span></div>
+            </div>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <button class="btn btn-pink" id="catalogFromMain">✨ Смотреть каталог</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section id="catalogPage" class="catalog-page">
+        <div class="card" style="background: #ffedd9;">
+            <h2 style="font-family: 'Fredoka One', cursive; color: #aa4d34;">🍬 Каталог мармелада</h2>
+            <div class="catalog-grid" id="catalogGrid"></div>
+        </div>
+    </section>
+
+    <!-- КОРЗИНА -->
+    <section id="cartSection" class="cart-section card">
+        <h3>🛒 Корзина <span style="font-size: 1rem; font-weight: 400;">(добавляйте товары)</span></h3>
+        <div class="cart-items" id="cartItems">
+            <div style="color: #8c5f47; padding: 0.4rem;">Корзина пуста</div>
+        </div>
+        <div class="cart-total" id="cartTotal">Итого: 0 ₽</div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <button class="btn clear-btn" id="clearCartBtn">🗑️ Очистить</button>
+        </div>
+    </section>
+
+    <div class="footer">🍭 Gummy House · сделано с любовью к сладкому</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

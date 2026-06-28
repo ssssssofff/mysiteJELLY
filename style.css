@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #fff8f0;
+    color: #4a2c2a;
+    padding: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bento {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgba(255, 245, 235, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 40px 20px 40px 20px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 12px 28px rgba(255, 180, 130, 0.2), 0 4px 12px rgba(255, 200, 150, 0.15);
+    border: 2px solid #ffe0c0;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 36px rgba(255, 160, 100, 0.25);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(145deg, #ffe9d4, #ffdbb5);
+    border-radius: 60px 20px 60px 20px;
+    padding: 1.2rem 2.2rem;
+    border: 2px solid #ffc489;
+}
+
+.logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #cc4f3a;
+    text-shadow: 4px 4px 0 #ffcf9a, 0 6px 16px rgba(255, 150, 80, 0.3);
+}
+
+.logo span {
+    color: #f9b83a;
+    text-shadow: 3px 3px 0 #d47b2c;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: #ffb07c;
+    border: none;
+    border-radius: 60px;
+    padding: 0.7rem 1.8rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #3d1f1a;
+    box-shadow: 0 6px 0 #b25d3a, 0 6px 14px rgba(190, 90, 40, 0.3);
+    cursor: pointer;
+    transition: all 0.08s linear;
+    border: 2px solid #ffdbb0;
+}
+
+.btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0 #b25d3a;
+}
+
+.btn-pink {
+    background: #ff8a9e;
+    box-shadow: 0 6px 0 #b34f62, 0 6px 14px rgba(200, 70, 90, 0.3);
+    border-color: #ffb3c1;
+    color: #2f1419;
+}
+
+.btn-yellow {
+    background: #fad36b;
+    box-shadow: 0 6px 0 #b3862c, 0 6px 14px rgba(200, 150, 30, 0.3);
+    border-color: #ffe69e;
+}
+
+.welcome-card {
+    background: linear-gradient(135deg, #ffe5d0, #ffdbbd);
+    border-radius: 60px 20px 60px 20px;
+    padding: 2.2rem 2.5rem;
+    border: 2px solid #fabb82;
+}
+
+.welcome-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.6rem;
+    color: #9b3f2e;
+    text-shadow: 3px 3px 0 #fecb92;
+    margin-bottom: 1rem;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
+    margin: 1.8rem 0 0.8rem;
+}
+
+.feature-item {
+    background: rgba(255, 240, 220, 0.7);
+    padding: 0.6rem 1.5rem 0.6rem 1rem;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #fecb9e;
+    box-shadow: inset 0 1px 6px #ffe5cb;
+}
+
+.feature-item::before {
+    content: "🍬";
+    font-size: 1.6rem;
+    filter: drop-shadow(0 4px 4px rgba(255, 150, 80, 0.3));
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.gummy-img {
+    background: #ffe3cd;
+    border-radius: 40px 10px 40px 10px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #fec89a;
+    box-shadow: 0 6px 0 #d6976a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.gummy-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 2px solid #fec89a;
+}
+
+.gummy-img span {
+    font-size: 1.1rem;
+    margin-top: 0.4rem;
+}
+
+.catalog-page {
+    display: none;
+    animation: fadeSlide 0.3s ease;
+}
+
+.catalog-page.active {
+    display: block;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 0; transform: translateY(18px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+    margin: 1.5rem 0;
+}
+
+.product-card {
+    background: #ffedd9;
+    border-radius: 50px 12px 50px 12px;
+    padding: 1.4rem 1rem 1.8rem;
+    border: 2px solid #fdc28c;
+    box-shadow: 0 8px 0 #c58358, 0 8px 20px rgba(200, 120, 60, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.product-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 40px;
+    border: 2px solid #fdc28c;
+}
+
+.product-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.product-desc {
+    font-size: 0.95rem;
+    background: #ffdbbd;
+    padding: 0.2rem 0.8rem;
+    border-radius: 40px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b14b2e;
+    background: #fff1d2;
+    padding: 0.2rem 1rem;
+    border-radius: 60px;
+}
+
+.add-btn {
+    background: #ffb07c;
+    border: none;
+    border-radius: 60px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #2d1712;
+    box-shadow: 0 4px 0 #a55d3a;
+    cursor: pointer;
+    border: 2px solid #ffdbb0;
+}
+
+.add-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #a55d3a;
+}
+
+.cart-section {
+    margin-top: 2rem;
+    background: #ffe1c6;
+    border-radius: 60px 20px 60px 20px;
+    padding: 1.5rem 2rem;
+    border: 2px solid #f5b07a;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    min-height: 40px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    background: #fff5e6;
+    padding: 0.5rem 1.2rem;
+    border-radius: 60px;
+    border: 1px solid #f7b984;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cart-total {
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-align: right;
+    border-top: 2px dashed #d8894e;
+    padding-top: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+.clear-btn {
+    background: #d68a7a;
+    box-shadow: 0 4px 0 #884f3f;
+    border-color: #e6aa92;
+    color: #2b1712;
+}
+
+.footer {
+    margin-top: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+    color: #9a6a53;
+}
+
+@media (max-width: 650px) {
+    .logo { font-size: 2.2rem; }
+    .header { flex-direction: column; align-items: start; gap: 1rem; }
+    .welcome-title { font-size: 2rem; }
+    .card { padding: 1.2rem; }
+    .gummy-img img { width: 80px; height: 80px; }
+    .product-card img { width: 140px; height: 140px; }
+}
